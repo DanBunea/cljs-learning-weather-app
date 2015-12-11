@@ -1,0 +1,243 @@
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  resources/public/js/compiled/out/goog/deps.js
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.343 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  resources/public/js/compiled/out/goog/deps.js
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.337 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.165 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+WARNING: Use of undeclared Var weather-app.core/hello-world at line 33 /Users/valic/Documents/Work/weather-app/src/weather_app/core.cljs
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.793 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.168 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+[31mCompiling "resources/public/js/compiled/weather_app.js" failed.
+[0mERROR: Unmatched delimiter ) on file /Users/valic/Documents/Work/weather-app/src/weather_app/core.cljs, line 31, column 24
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.154 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.162 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.294 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.309 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.309 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.201 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.298 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.272 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.301 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.16 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.278 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.275 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.346 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.368 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.378 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.449 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+WARNING: Use of undeclared Var cljs.core/let at line 36 /Users/valic/Documents/Work/weather-app/src/weather_app/core.cljs
+WARNING: Use of undeclared Var weather-app.core/inner-state at line 36 /Users/valic/Documents/Work/weather-app/src/weather_app/core.cljs
+WARNING: Use of undeclared Var weather-app.core/inner-state at line 39 /Users/valic/Documents/Work/weather-app/src/weather_app/core.cljs
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.524 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.248 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.354 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.53 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.17 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.168 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.304 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+WARNING: Use of undeclared Var weather-app.core/change-weather at line 48 /Users/valic/Documents/Work/weather-app/src/weather_app/core.cljs
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.319 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+[31mCompiling "resources/public/js/compiled/weather_app.js" failed.
+[0mERROR: EOF while reading, starting at line 26 and column 1 on file /Users/valic/Documents/Work/weather-app/src/weather_app/core.cljs, line 90, column 1
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.232 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.706 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.325 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.365 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+WARNING: Wrong number of args (2) passed to weather-app.core/log at line 35 /Users/valic/Documents/Work/weather-app/src/weather_app/core.cljs
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.285 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+WARNING: Wrong number of args (2) passed to weather-app.core/log at line 35 /Users/valic/Documents/Work/weather-app/src/weather_app/core.cljs
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.358 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+WARNING: Use of undeclared Var weather-app.core/&params at line 26 /Users/valic/Documents/Work/weather-app/src/weather_app/core.cljs
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.498 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.269 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.447 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.189 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.182 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+[31mCompiling "resources/public/js/compiled/weather_app.js" failed.
+[0mERROR: Unmatched delimiter ) on file /Users/valic/Documents/Work/weather-app/src/weather_app/core.cljs, line 43, column 46
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.166 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.181 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.187 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.215 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.227 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.35 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.173 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+WARNING: Use of undeclared Var weather-app.core/GET at line 42 /Users/valic/Documents/Work/weather-app/src/weather_app/core.cljs
+WARNING: Use of undeclared Var weather-app.core/app-state at line 43 /Users/valic/Documents/Work/weather-app/src/weather_app/core.cljs
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.446 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+[31mCompiling "resources/public/js/compiled/weather_app.js" failed.
+[0mANALYSIS ERROR: No such namespace: cljs-ajax.core, could not locate cljs_ajax/core.cljs, cljs_ajax/core.cljc, or Closure namespace "cljs-ajax.core" on file null, line null, column null
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.242 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+WARNING: Use of undeclared Var weather-app.core/app-state at line 46 /Users/valic/Documents/Work/weather-app/src/weather_app/core.cljs
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 2.536 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.447 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.428 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+[31mCompiling "resources/public/js/compiled/weather_app.js" failed.
+[0mANALYSIS ERROR: No such namespace: core.ajax, could not locate core/ajax.cljs, core/ajax.cljc, or Closure namespace "core.ajax" on file null, line null, column null
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.106 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.225 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.44 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.422 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.533 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.39 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+[31mCompiling "resources/public/js/compiled/weather_app.js" failed.
+[0mERROR: Unmatched delimiter } on file /Users/valic/Documents/Work/weather-app/src/weather_app/core.cljs, line 46, column 99
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.148 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+[31mCompiling "resources/public/js/compiled/weather_app.js" failed.
+[0mERROR: Unmatched delimiter ) on file /Users/valic/Documents/Work/weather-app/src/weather_app/core.cljs, line 48, column 11
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.135 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+[31mCompiling "resources/public/js/compiled/weather_app.js" failed.
+[0mERROR: EOF while reading, starting at line 42 and column 1 on file /Users/valic/Documents/Work/weather-app/src/weather_app/core.cljs, line 109, column 1
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.135 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.24 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.555 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.385 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.214 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.745 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.432 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.462 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.334 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.545 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.43 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.168 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.568 seconds.[0m
