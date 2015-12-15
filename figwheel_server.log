@@ -433,3 +433,9 @@ notifying browser that file changed:  out/weather_app/core.js
 [0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
 notifying browser that file changed:  out/weather_app/core.js
 [32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.599 seconds.[0m
+[0mCompiling "resources/public/js/test/test.js" from ["src" "test"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/test/test.js" in 0.605 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.528 seconds.[0m
