@@ -4,21 +4,21 @@ goog.require('cljs.core');
 goog.require('reagent.core');
 goog.require('ajax.core');
 cljs.core.enable_console_print_BANG_.call(null);
-cljs.core.println.call(null,"Edi1ts to  this text sh ould show up in your developer console.");
+cljs.core.println.call(null,"Edi1ts to  this te xt sh ould show up in your developer console.");
 if(typeof weather_app.core.model !== 'undefined'){
 } else {
 weather_app.core.model = reagent.core.atom.call(null,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"text","text",-1790561697),"Weather app",new cljs.core.Keyword(null,"weather","weather",1320452344),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"city","city",-393302614),"Timisoara",new cljs.core.Keyword(null,"country","country",312965309),"RO",new cljs.core.Keyword(null,"temp","temp",1791541284),"+3"], null)], null));
 }
 weather_app.core.log = (function weather_app$core$log(var_args){
 var args__17892__auto__ = [];
-var len__17885__auto___40069 = arguments.length;
-var i__17886__auto___40070 = (0);
+var len__17885__auto___40109 = arguments.length;
+var i__17886__auto___40110 = (0);
 while(true){
-if((i__17886__auto___40070 < len__17885__auto___40069)){
-args__17892__auto__.push((arguments[i__17886__auto___40070]));
+if((i__17886__auto___40110 < len__17885__auto___40109)){
+args__17892__auto__.push((arguments[i__17886__auto___40110]));
 
-var G__40071 = (i__17886__auto___40070 + (1));
-i__17886__auto___40070 = G__40071;
+var G__40111 = (i__17886__auto___40110 + (1));
+i__17886__auto___40110 = G__40111;
 continue;
 } else {
 }
@@ -35,12 +35,12 @@ return console.log(params);
 
 weather_app.core.log.cljs$lang$maxFixedArity = (0);
 
-weather_app.core.log.cljs$lang$applyTo = (function (seq40068){
-return weather_app.core.log.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq40068));
+weather_app.core.log.cljs$lang$applyTo = (function (seq40108){
+return weather_app.core.log.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq40108));
 });
 weather_app.core.fetch_weather = (function weather_app$core$fetch_weather(query){
-return ajax.core.GET.call(null,[cljs.core.str(" http://api.openweathermap.org/data/2.5/weather?appid=22f30c03f6fa4e96955fd942787dab02&q="),cljs.core.str(query)].join(''),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"handler","handler",-195596612),(function (p1__40072_SHARP_){
-return cljs.core.swap_BANG_.call(null,weather_app.core.model,cljs.core.assoc,new cljs.core.Keyword(null,"weather","weather",1320452344),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"temp","temp",1791541284),(cljs.core.get_in.call(null,p1__40072_SHARP_,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["main","temp"], null)) - 273.15),new cljs.core.Keyword(null,"city","city",-393302614),query,new cljs.core.Keyword(null,"country","country",312965309),cljs.core.get_in.call(null,p1__40072_SHARP_,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["sys","country"], null))], null));
+return ajax.core.GET.call(null,[cljs.core.str(" http://api.openweathermap.org/data/2.5/weather?appid=22f30c03f6fa4e96955fd942787dab02&q="),cljs.core.str(query)].join(''),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"handler","handler",-195596612),(function (p1__40112_SHARP_){
+return cljs.core.swap_BANG_.call(null,weather_app.core.model,cljs.core.assoc,new cljs.core.Keyword(null,"weather","weather",1320452344),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"temp","temp",1791541284),(cljs.core.get_in.call(null,p1__40112_SHARP_,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["main","temp"], null)) - 273.15),new cljs.core.Keyword(null,"city","city",-393302614),query,new cljs.core.Keyword(null,"country","country",312965309),cljs.core.get_in.call(null,p1__40112_SHARP_,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["sys","country"], null))], null));
 })], null),false);
 });
 weather_app.core.weather_component = (function weather_app$core$weather_component(city,temp,country){
@@ -51,8 +51,8 @@ var inner_state = reagent.core.atom.call(null,new cljs.core.PersistentArrayMap(n
 return ((function (inner_state){
 return (function (){
 return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"input","input",556931961),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"type","type",1174270348),"text",new cljs.core.Keyword(null,"value","value",305978217),cljs.core.deref.call(null,inner_state).call(null,new cljs.core.Keyword(null,"text","text",-1790561697)),new cljs.core.Keyword(null,"on-change","on-change",-732046149),((function (inner_state){
-return (function (p1__40073_SHARP_){
-return cljs.core.swap_BANG_.call(null,inner_state,cljs.core.assoc,new cljs.core.Keyword(null,"text","text",-1790561697),p1__40073_SHARP_.target.value);
+return (function (p1__40113_SHARP_){
+return cljs.core.swap_BANG_.call(null,inner_state,cljs.core.assoc,new cljs.core.Keyword(null,"text","text",-1790561697),p1__40113_SHARP_.target.value);
 });})(inner_state))
 ], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"input","input",556931961),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"type","type",1174270348),"button",new cljs.core.Keyword(null,"value","value",305978217),"GO",new cljs.core.Keyword(null,"on-click","on-click",1632826543),((function (inner_state){
 return (function (){
@@ -72,4 +72,4 @@ weather_app.core.on_js_reload = (function weather_app$core$on_js_reload(){
 return null;
 });
 
-//# sourceMappingURL=core.js.map?rel=1450190322464
+//# sourceMappingURL=core.js.map?rel=1450190478802
