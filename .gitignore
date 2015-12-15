@@ -1,5 +1,6 @@
 *.map
 .idea
+*.log
 *.iml
 .repl
 out/
