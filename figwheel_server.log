@@ -241,3 +241,119 @@ notifying browser that file changed:  out/weather_app/core.js
 [0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
 notifying browser that file changed:  out/weather_app/core.js
 [32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.568 seconds.[0m
+[0mCompiling "resources/public/js/test/test.js" from ["src" "test"]...
+notifying browser that file changed:  resources/public/js/test/out/goog/deps.js
+notifying browser that file changed:  resources/public/js/test/out/cljs_deps.js
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/test/test.js" in 0.554 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  resources/public/js/compiled/out/goog/deps.js
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.653 seconds.[0m
+[0mCompiling "resources/public/js/test/test.js" from ["src" "test"]...
+notifying browser that file changed:  out/weather_app/core_test.js
+[32mSuccessfully compiled "resources/public/js/test/test.js" in 0.277 seconds.[0m
+[0mCompiling "resources/public/js/test/test.js" from ["src" "test"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/test/test.js" in 0.314 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.276 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.89 seconds.[0m
+[0mCompiling "resources/public/js/test/test.js" from ["src" "test"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/test/test.js" in 0.535 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 0.591 seconds.[0m
+[0mCompiling "resources/public/js/test/test.js" from ["src" "test"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/test/test.js" in 1.016 seconds.[0m
+[0mCompiling "resources/public/js/test/test.js" from ["src" "test"]...
+notifying browser that file changed:  out/weather_app/core_test.js
+[32mSuccessfully compiled "resources/public/js/test/test.js" in 0.487 seconds.[0m
+[0mCompiling "resources/public/js/test/test.js" from ["src" "test"]...
+[31mCompiling "resources/public/js/test/test.js" failed.
+[0mERROR: EOF while reading, starting at line 24 and column 1 on file /Users/razvan/Documents/Workdesk/clj/project1/cljs-learning-weather-app/test/weather_app/core_test.cljs, line 30, column 1
+[32mSuccessfully compiled "resources/public/js/test/test.js" in 0.284 seconds.[0m
+[0mCompiling "resources/public/js/test/test.js" from ["src" "test"]...
+[31mCompiling "resources/public/js/test/test.js" failed.
+[0mERROR: EOF while reading, starting at line 24 and column 1 on file /Users/razvan/Documents/Workdesk/clj/project1/cljs-learning-weather-app/test/weather_app/core_test.cljs, line 30, column 1
+[32mSuccessfully compiled "resources/public/js/test/test.js" in 0.139 seconds.[0m
+[0mCompiling "resources/public/js/test/test.js" from ["src" "test"]...
+[31mCompiling "resources/public/js/test/test.js" failed.
+[0mERROR: EOF while reading, starting at line 25 and column 1 on file /Users/razvan/Documents/Workdesk/clj/project1/cljs-learning-weather-app/test/weather_app/core_test.cljs, line 31, column 1
+[32mSuccessfully compiled "resources/public/js/test/test.js" in 0.216 seconds.[0m
+[0mCompiling "resources/public/js/test/test.js" from ["src" "test"]...
+[31mCompiling "resources/public/js/test/test.js" failed.
+[0mERROR: EOF while reading, starting at line 35 and column 1 on file /Users/razvan/Documents/Workdesk/clj/project1/cljs-learning-weather-app/test/weather_app/core_test.cljs, line 41, column 1
+[32mSuccessfully compiled "resources/public/js/test/test.js" in 0.925 seconds.[0m
+[0mCompiling "resources/public/js/test/test.js" from ["src" "test"]...
+notifying browser that file changed:  resources/public/js/test/out/goog/deps.js
+notifying browser that file changed:  resources/public/js/test/out/cljs_deps.js
+notifying browser that file changed:  out/weather_app/core_test.js
+[32mSuccessfully compiled "resources/public/js/test/test.js" in 0.305 seconds.[0m
+[0mCompiling "resources/public/js/test/test.js" from ["src" "test"]...
+[31mCompiling "resources/public/js/test/test.js" failed.
+[0mERROR: EOF while reading, starting at line 26 and column 1 on file /Users/razvan/Documents/Workdesk/clj/project1/cljs-learning-weather-app/test/weather_app/core_test.cljs, line 32, column 1
+[32mSuccessfully compiled "resources/public/js/test/test.js" in 0.16 seconds.[0m
+[0mCompiling "resources/public/js/test/test.js" from ["src" "test"]...
+[31mCompiling "resources/public/js/test/test.js" failed.
+[0mERROR: EOF while reading, starting at line 24 and column 1 on file /Users/razvan/Documents/Workdesk/clj/project1/cljs-learning-weather-app/test/weather_app/core_test.cljs, line 35, column 1
+[32mSuccessfully compiled "resources/public/js/test/test.js" in 0.122 seconds.[0m
+[0mCompiling "resources/public/js/test/test.js" from ["src" "test"]...
+[31mCompiling "resources/public/js/test/test.js" failed.
+[0mERROR: EOF while reading, starting at line 22 and column 1 on file /Users/razvan/Documents/Workdesk/clj/project1/cljs-learning-weather-app/test/weather_app/core_test.cljs, line 33, column 1
+[32mSuccessfully compiled "resources/public/js/test/test.js" in 0.121 seconds.[0m
+[0mCompiling "resources/public/js/test/test.js" from ["src" "test"]...
+[31mCompiling "resources/public/js/test/test.js" failed.
+[0mERROR: EOF while reading, starting at line 22 and column 1 on file /Users/razvan/Documents/Workdesk/clj/project1/cljs-learning-weather-app/test/weather_app/core_test.cljs, line 34, column 1
+[32mSuccessfully compiled "resources/public/js/test/test.js" in 0.132 seconds.[0m
+[0mCompiling "resources/public/js/test/test.js" from ["src" "test"]...
+[31mCompiling "resources/public/js/test/test.js" failed.
+[0mERROR: EOF while reading, starting at line 22 and column 1 on file /Users/razvan/Documents/Workdesk/clj/project1/cljs-learning-weather-app/test/weather_app/core_test.cljs, line 34, column 1
+[32mSuccessfully compiled "resources/public/js/test/test.js" in 0.128 seconds.[0m
+[0mCompiling "resources/public/js/test/test.js" from ["src" "test"]...
+[31mCompiling "resources/public/js/test/test.js" failed.
+[0mERROR: EOF while reading, starting at line 22 and column 1 on file /Users/razvan/Documents/Workdesk/clj/project1/cljs-learning-weather-app/test/weather_app/core_test.cljs, line 34, column 1
+[32mSuccessfully compiled "resources/public/js/test/test.js" in 0.154 seconds.[0m
+[0mCompiling "resources/public/js/test/test.js" from ["src" "test"]...
+notifying browser that file changed:  out/weather_app/core_test.js
+[32mSuccessfully compiled "resources/public/js/test/test.js" in 0.553 seconds.[0m
+[0mCompiling "resources/public/js/test/test.js" from ["src" "test"]...
+notifying browser that file changed:  out/weather_app/core_test.js
+[32mSuccessfully compiled "resources/public/js/test/test.js" in 0.307 seconds.[0m
+[0mCompiling "resources/public/js/test/test.js" from ["src" "test"]...
+notifying browser that file changed:  out/weather_app/core_test.js
+[32mSuccessfully compiled "resources/public/js/test/test.js" in 0.295 seconds.[0m
+[0mCompiling "resources/public/js/test/test.js" from ["src" "test"]...
+notifying browser that file changed:  out/weather_app/core_test.js
+[32mSuccessfully compiled "resources/public/js/test/test.js" in 0.277 seconds.[0m
+[0mCompiling "resources/public/js/test/test.js" from ["src" "test"]...
+[31mCompiling "resources/public/js/test/test.js" failed.
+[0mERROR: EOF while reading, starting at line 32 and column 1 on file /Users/razvan/Documents/Workdesk/clj/project1/cljs-learning-weather-app/test/weather_app/core_test.cljs, line 37, column 1
+[32mSuccessfully compiled "resources/public/js/test/test.js" in 0.133 seconds.[0m
+[0mCompiling "resources/public/js/test/test.js" from ["src" "test"]...
+notifying browser that file changed:  out/weather_app/core_test.js
+[32mSuccessfully compiled "resources/public/js/test/test.js" in 0.285 seconds.[0m
+[0mCompiling "resources/public/js/test/test.js" from ["src" "test"]...
+notifying browser that file changed:  out/weather_app/core_test.js
+[32mSuccessfully compiled "resources/public/js/test/test.js" in 0.273 seconds.[0m
+[0mCompiling "resources/public/js/test/test.js" from ["src" "test"]...
+notifying browser that file changed:  out/weather_app/core_test.js
+[32mSuccessfully compiled "resources/public/js/test/test.js" in 0.283 seconds.[0m
+[0mCompiling "resources/public/js/test/test.js" from ["src" "test"]...
+notifying browser that file changed:  out/weather_app/core_test.js
+[32mSuccessfully compiled "resources/public/js/test/test.js" in 0.283 seconds.[0m
+[0mCompiling "resources/public/js/test/test.js" from ["src" "test"]...
+notifying browser that file changed:  out/weather_app/core_test.js
+[32mSuccessfully compiled "resources/public/js/test/test.js" in 0.315 seconds.[0m
+[0mCompiling "resources/public/js/test/test.js" from ["src" "test"]...
+notifying browser that file changed:  out/weather_app/core_test.js
+[32mSuccessfully compiled "resources/public/js/test/test.js" in 0.3 seconds.[0m
+[0mCompiling "resources/public/js/test/test.js" from ["src" "test"]...
+notifying browser that file changed:  out/weather_app/core_test.js
+[32mSuccessfully compiled "resources/public/js/test/test.js" in 0.279 seconds.[0m

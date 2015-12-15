@@ -10,6 +10,7 @@
                  [reagent "0.5.1" :exclusions [cljsjs/react]]
                  [cljsjs/react-with-addons "0.13.3-0"]
                  [cljs-ajax "0.5.2"]
+
                  [cljsjs/jquery "2.1.4-0"]
                  [cljsjs/jquery-ui "1.11.3-1"]]
 
@@ -34,12 +35,27 @@
                ;; This next build is an compressed minified build for
                ;; production. You can build this with:
                ;; lein cljsbuild once min
+
+               {:id "test"
+                :source-paths ["src" "test"]
+                :compiler {:output-to "resources/public/js/test/test.js"
+                           :output-dir "resources/public/js/test/out"
+                           :optimizations :none
+                           :main weather-app.test-runner
+                           :asset-path "js/test/out"
+                           :source-map true
+                           ;; :source-map-timestamp true
+                           :cache-analysis true }}
+
+
                {:id "min"
                 :source-paths ["src"]
                 :compiler {:output-to "resources/public/js/compiled/weather_app.js"
                            :main weather-app.core
                            :optimizations :advanced
                            :pretty-print false}}]}
+
+  :aliases {"test" ["cljsbuild" "test"]}
 
   :figwheel {;; :http-server-root "public" ;; default and assumes "resources"
              ;; :server-port 3449 ;; default
