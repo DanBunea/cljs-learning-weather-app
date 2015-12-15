@@ -1,1 +1,2 @@
-/resources/public/**/*.map
+/resources/public/js/compiled/out/**/*.map
+/resources/public/js/test/out/**/*.map
