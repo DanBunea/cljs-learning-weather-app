@@ -16,7 +16,7 @@
 ;;MODEL
 (defonce model (r/atom
                 {
-                 :text "Weather app"
+                 :text "Weather123 app"
                  :weather {
                            :city "Timisoara"
                            :country "RO"
