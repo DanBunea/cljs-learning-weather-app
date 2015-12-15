@@ -2,6 +2,7 @@
   (:require
    [reagent.core :as r :refer [atom]]
    [cljs.test :refer-macros [deftest testing is]]
+   [weather-app.core :as w :refer [weather-component]]
    [weather-app.core]))
 
 
@@ -36,3 +37,10 @@
     (is (= "tab_properties" (get-in after-select  [:selected :selected_tab])))
     (is (= [0] (get-in after-select  [:selected :page_object_cursor])))
     ))
+
+(deftest component-test
+  (let [comp (r/render-component [w/weather-component "a" 12]
+        (. js/document (getElementById "test")))]
+    (print 1 comp)
+    (is (= 1 1))))
+
