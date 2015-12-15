@@ -4,21 +4,21 @@ goog.require('cljs.core');
 goog.require('reagent.core');
 goog.require('ajax.core');
 cljs.core.enable_console_print_BANG_.call(null);
-cljs.core.println.call(null,"Edi1ts to this text should show up in your developer console.");
+cljs.core.println.call(null,"Edi1ts to this text sh ould show up in your developer console.");
 if(typeof weather_app.core.model !== 'undefined'){
 } else {
-weather_app.core.model = reagent.core.atom.call(null,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"text","text",-1790561697),"Weather123 app",new cljs.core.Keyword(null,"weather","weather",1320452344),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"city","city",-393302614),"Timisoara",new cljs.core.Keyword(null,"country","country",312965309),"RO",new cljs.core.Keyword(null,"temp","temp",1791541284),"+3"], null)], null));
+weather_app.core.model = reagent.core.atom.call(null,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"text","text",-1790561697),"Weather app",new cljs.core.Keyword(null,"weather","weather",1320452344),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"city","city",-393302614),"Timisoara",new cljs.core.Keyword(null,"country","country",312965309),"RO",new cljs.core.Keyword(null,"temp","temp",1791541284),"+3"], null)], null));
 }
 weather_app.core.log = (function weather_app$core$log(var_args){
 var args__17892__auto__ = [];
-var len__17885__auto___28849 = arguments.length;
-var i__17886__auto___28850 = (0);
+var len__17885__auto___40002 = arguments.length;
+var i__17886__auto___40003 = (0);
 while(true){
-if((i__17886__auto___28850 < len__17885__auto___28849)){
-args__17892__auto__.push((arguments[i__17886__auto___28850]));
+if((i__17886__auto___40003 < len__17885__auto___40002)){
+args__17892__auto__.push((arguments[i__17886__auto___40003]));
 
-var G__28851 = (i__17886__auto___28850 + (1));
-i__17886__auto___28850 = G__28851;
+var G__40004 = (i__17886__auto___40003 + (1));
+i__17886__auto___40003 = G__40004;
 continue;
 } else {
 }
@@ -35,12 +35,12 @@ return console.log(params);
 
 weather_app.core.log.cljs$lang$maxFixedArity = (0);
 
-weather_app.core.log.cljs$lang$applyTo = (function (seq28848){
-return weather_app.core.log.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq28848));
+weather_app.core.log.cljs$lang$applyTo = (function (seq40001){
+return weather_app.core.log.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq40001));
 });
 weather_app.core.fetch_weather = (function weather_app$core$fetch_weather(query){
-return ajax.core.GET.call(null,[cljs.core.str(" http://api.openweathermap.org/data/2.5/weather?appid=22f30c03f6fa4e96955fd942787dab02&q="),cljs.core.str(query)].join(''),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"handler","handler",-195596612),(function (p1__28852_SHARP_){
-return cljs.core.swap_BANG_.call(null,weather_app.core.model,cljs.core.assoc,new cljs.core.Keyword(null,"weather","weather",1320452344),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"temp","temp",1791541284),(cljs.core.get_in.call(null,p1__28852_SHARP_,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["main","temp"], null)) - 273.15),new cljs.core.Keyword(null,"city","city",-393302614),query,new cljs.core.Keyword(null,"country","country",312965309),cljs.core.get_in.call(null,p1__28852_SHARP_,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["sys","country"], null))], null));
+return ajax.core.GET.call(null,[cljs.core.str(" http://api.openweathermap.org/data/2.5/weather?appid=22f30c03f6fa4e96955fd942787dab02&q="),cljs.core.str(query)].join(''),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"handler","handler",-195596612),(function (p1__40005_SHARP_){
+return cljs.core.swap_BANG_.call(null,weather_app.core.model,cljs.core.assoc,new cljs.core.Keyword(null,"weather","weather",1320452344),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"temp","temp",1791541284),(cljs.core.get_in.call(null,p1__40005_SHARP_,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["main","temp"], null)) - 273.15),new cljs.core.Keyword(null,"city","city",-393302614),query,new cljs.core.Keyword(null,"country","country",312965309),cljs.core.get_in.call(null,p1__40005_SHARP_,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["sys","country"], null))], null));
 })], null),false);
 });
 weather_app.core.weather_component = (function weather_app$core$weather_component(city,temp,country){
@@ -51,8 +51,8 @@ var inner_state = reagent.core.atom.call(null,new cljs.core.PersistentArrayMap(n
 return ((function (inner_state){
 return (function (){
 return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"input","input",556931961),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"type","type",1174270348),"text",new cljs.core.Keyword(null,"value","value",305978217),cljs.core.deref.call(null,inner_state).call(null,new cljs.core.Keyword(null,"text","text",-1790561697)),new cljs.core.Keyword(null,"on-change","on-change",-732046149),((function (inner_state){
-return (function (p1__28853_SHARP_){
-return cljs.core.swap_BANG_.call(null,inner_state,cljs.core.assoc,new cljs.core.Keyword(null,"text","text",-1790561697),p1__28853_SHARP_.target.value);
+return (function (p1__40006_SHARP_){
+return cljs.core.swap_BANG_.call(null,inner_state,cljs.core.assoc,new cljs.core.Keyword(null,"text","text",-1790561697),p1__40006_SHARP_.target.value);
 });})(inner_state))
 ], null)], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"input","input",556931961),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"type","type",1174270348),"button",new cljs.core.Keyword(null,"value","value",305978217),"GO",new cljs.core.Keyword(null,"on-click","on-click",1632826543),((function (inner_state){
 return (function (){

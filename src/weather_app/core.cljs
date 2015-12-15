@@ -6,7 +6,7 @@
 
 (enable-console-print!)
 
-(println "Edi1ts to this text should show up in your developer console.")
+(println "Edi1ts to this text sh ould show up in your developer console.")
 
 ;; define your app data so that it doesn't get over-written on reload
 
@@ -16,7 +16,7 @@
 ;;MODEL
 (defonce model (r/atom
                 {
-                 :text "Weather123 app"
+                 :text "Weather app"
                  :weather {
                            :city "Timisoara"
                            :country "RO"
