@@ -4,6 +4,7 @@
 .repl
 out/
 resources/public/js/compiled
+resources/public/js/js
 resources/public/js/out
 resources/public/js/example.js
 resources/public/js/prod

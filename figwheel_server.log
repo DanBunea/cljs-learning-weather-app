@@ -451,3 +451,10 @@ notifying browser that file changed:  out/weather_app/core.js
 [0mCompiling "resources/public/js/test/test.js" from ["src" "test"]...
 notifying browser that file changed:  out/weather_app/core.js
 [32mSuccessfully compiled "resources/public/js/test/test.js" in 1.453 seconds.[0m
+[0mCompiling "resources/public/js/test/test.js" from ["src" "test"]...
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/test/test.js" in 15.642 seconds.[0m
+[0mCompiling "resources/public/js/compiled/weather_app.js" from ["src"]...
+notifying browser that file changed:  resources/public/js/compiled/out/cljs_deps.js
+notifying browser that file changed:  out/weather_app/core.js
+[32mSuccessfully compiled "resources/public/js/compiled/weather_app.js" in 9.367 seconds.[0m
