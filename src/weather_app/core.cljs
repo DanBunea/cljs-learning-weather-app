@@ -6,7 +6,7 @@
 
 (enable-console-print!)
 
-(println "Edi1ts to  this te xt sh ould show up in your developer console.")
+(println "Edi1ts to  this te xt sh ould show  up in your developer console.")
 
 ;; define your app data so that it doesn't get over-written on reload
 
