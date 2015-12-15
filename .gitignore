@@ -1,1 +1,3 @@
 *.map
+resources/public/js/*
+figwheel_server.log
