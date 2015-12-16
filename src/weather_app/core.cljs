@@ -25,6 +25,14 @@
                  }))
 
 
+(def errors (r/atom []))
+
+(defn add-error [error]
+  (swap! errors conj error))
+
+
+
+
 ;;CONTROLLER
 (defn log [& params]
   (.log js/console params))
@@ -45,6 +53,21 @@
                           }
                          )}
        false))
+
+
+(defn change-title [title]
+  (try
+    (swap! model
+           #(-> %
+                (assoc :text title)
+                ((fn [state]
+                   (throw "there is an error")))
+                ))
+    (catch :default e
+      (add-error e)
+      (.log js/console 5 (pr-str e ))
+
+      )))
 
 
 ;;VIEWS
@@ -81,7 +104,10 @@
 
   (.log js/console 1 (pr-str @model))
   [:div#main
-   [:h2#app-title (:text @model)]
+   [:h2#app-title {
+                   :on-click #(change-title "abc")
+                   }
+    (@model :text)]
    [choose-city-component]
    [weather-component
     (get-in @model [:weather :city])

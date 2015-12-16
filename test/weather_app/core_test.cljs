@@ -21,15 +21,19 @@
                                }}))
 
 
+
+
+
 (defn select [index]
-  (swap! model
-         #(-> %
-              (assoc-in [:storyboard :pages 0 :layers 0 :children 0 :is_selected] true)
-              (assoc-in [:selected :selected_tab] "tab_properties")
-              (assoc-in [:selected :page_object_cursor] [0])
-           )
-  )
-  )
+    (swap! model
+           #(-> %
+                (assoc-in [:storyboard :pages 0 :layers 0 :children 0 :is_selected] true)
+                (assoc-in [:selected :selected_tab] "tab_properties")
+                (assoc-in [:selected :page_object_cursor] [0])
+             )))
+
+
+
 
 (deftest center-test
   (let [after-select (select 0)]
@@ -38,9 +42,16 @@
     (is (= [0] (get-in after-select  [:selected :page_object_cursor])))
     ))
 
+(defn found-in [re div]
+  (let [res (.-innerHTML div)]
+    (if (re-find re res)
+      true
+      (do (println "Not found: " res)
+          false))))
+
 (deftest component-test
   (let [comp (r/render-component [w/weather-component "a" 12]
         (. js/document (getElementById "test")))]
-    (print 1 comp)
+    (print 1 (pr-str comp))
     (is (= 1 1))))
 
