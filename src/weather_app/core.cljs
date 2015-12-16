@@ -2,6 +2,7 @@
   (:require
    [reagent.core :as r :refer [atom]]
    [ajax.core :refer [GET POST]]
+   [weather-app.pi :refer [swap-model! errors]]
    ))
 
 (enable-console-print!)
@@ -24,11 +25,6 @@
                            }
                  }))
 
-
-(def errors (r/atom []))
-
-(defn add-error [error]
-  (swap! errors conj error))
 
 
 
@@ -55,19 +51,19 @@
        false))
 
 
-(defn change-title [title]
-  (try
-    (swap! model
-           #(-> %
-                (assoc :text title)
-                ((fn [state]
-                   (throw "there is an error")))
-                ))
-    (catch :default e
-      (add-error e)
-      (.log js/console 5 (pr-str e ))
 
-      )))
+
+(defn change-title [title]
+  (swap-model! model
+               #(-> %
+                    (assoc :text title)
+                    ((fn [state]
+                       (throw "there is an error")))
+                    )))
+
+
+
+
 
 
 ;;VIEWS
