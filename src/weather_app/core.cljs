@@ -1,8 +1,9 @@
 (ns weather-app.core
   (:require
    [reagent.core :as r :refer [atom]]
-   [ajax.core :refer [GET POST]]
    [weather-app.pi :refer [swap-model! errors]]
+   [weather-app.rest :refer [GET<]]
+   [cljs.core.async :refer [chan <! >! put! take!]]
    ))
 
 (enable-console-print!)
@@ -34,21 +35,20 @@
   (.log js/console params))
 
 
-(defn fetch-weather [query]
-  (GET (str " http://api.openweathermap.org/data/2.5/weather?appid=22f30c03f6fa4e96955fd942787dab02&q=" query)
-       {:handler #(swap! model
-                         assoc :weather
-                         {
-                          :temp (-
-                                 (get-in
-                                  %1
-                                  ["main" "temp"])
-                                 273.15)
+
+
+(defn inline-fetch [query]
+  (swap-model! model
+               #(-> %
+                    (assoc :text (str "Data for " query))
+                    ((fn [state]
+                       (let [data  (GET< (str " http://api.openweathermap.org/data/2.5/weather?appid=22f30c03f6fa4e96955fd942787dab02&q=" query))]
+                         (assoc state :weather {
+                          :temp (- (get-in data ["main" "temp"]) 273.15)
                           :city query
-                          :country (get-in %1 ["sys" "country"])
+                          :country (get-in data ["sys" "country"])
                           }
-                         )}
-       false))
+                         )))))))
 
 
 
@@ -88,7 +88,7 @@
         {
          :type "button"
          :value "GO"
-         :on-click #(fetch-weather (@inner-state :text))
+         :on-click #(inline-fetch (@inner-state :text))
          }]
        ]
       )))
