@@ -1,10 +1,13 @@
 (ns weather-app.core
   (:require
    [reagent.core :as r :refer [atom]]
-   [weather-app.pi :refer [swap-model! errors]]
-   [weather-app.rest :refer [GET<]]
+   [weather-app.pi :refer [swap-model! errors add-error clear-errors]]
+   [ajax.core :refer [GET POST]]
+   [weather-app.generic-components :refer [errors-component]]
    [cljs.core.async :refer [chan <! >! put! take!]]
-   ))
+   )
+   (:require-macros [cljs.core.async.macros :refer [go go-loop]])
+  )
 
 (enable-console-print!)
 
@@ -31,25 +34,24 @@
 
 
 ;;CONTROLLER
-(defn log [& params]
-  (.log js/console params))
 
 
 
-
-(defn inline-fetch [query]
-  (swap-model! model
-               #(-> %
-                    (assoc :text (str "Data for " query))
-                    ((fn [state]
-                       (let [data  (GET< (str " http://api.openweathermap.org/data/2.5/weather?appid=22f30c03f6fa4e96955fd942787dab02&q=" query))]
-                         (assoc state :weather {
-                          :temp (- (get-in data ["main" "temp"]) 273.15)
+(defn fetch-weather [query]
+  (GET (str " http://api.openweathermap.org/data/2.5/weather?appid=22f30c03f6fa4e96955fd942787dab02&q=" query)
+       {:handler #(swap! model
+                         assoc :weather
+                         {
+                          :temp (-
+                                 (get-in
+                                  %1
+                                  ["main" "temp"])
+                                 273.15)
                           :city query
-                          :country (get-in data ["sys" "country"])
+                          :country (get-in %1 ["sys" "country"])
                           }
-                         )))))))
-
+                         )}
+       false))
 
 
 
@@ -67,6 +69,8 @@
 
 
 ;;VIEWS
+
+
 (defn weather-component [city temp country]
   [:div#weather
     [:h2#city city]
@@ -88,7 +92,7 @@
         {
          :type "button"
          :value "GO"
-         :on-click #(inline-fetch (@inner-state :text))
+         :on-click #(fetch-weather (@inner-state :text))
          }]
        ]
       )))
@@ -100,10 +104,8 @@
 
   (.log js/console 1 (pr-str @model))
   [:div#main
-   [:h2#app-title {
-                   :on-click #(change-title "abc")
-                   }
-    (@model :text)]
+   (if (> (count @errors) 0) [errors-component ])
+   [:h2#app-title { :on-click #(change-title "abc") } (@model :text)]
    [choose-city-component]
    [weather-component
     (get-in @model [:weather :city])
