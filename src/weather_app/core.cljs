@@ -19,9 +19,13 @@
                 {
                  :text "Weather app"
                  :weather {
-                           :city "Timisoara"
-                           :country "RO"
-                           :temp "+3"
+                           :city "enter city above"
+                           :country ""
+                           :temp "__"
+                           :wind [{
+                                  :speed 0
+                                  :deg 0
+                                  }]
                            }
                  }))
 
@@ -34,18 +38,34 @@
   (.log js/console params))
 
 
+
+;; http://api.openweathermap.org - data example
+;; {
+;;  "coord":{"lon":21.23,"lat":45.75},
+;;  "weather":[{"id":701,"main":"Mist","description":"mist","icon":"50d"}],
+;;  "base":"cmc stations",
+;;  "main":{"temp":275.6,"pressure":1028,"humidity":93,"temp_min":275.15,"temp_max":276.15},
+;;  "wind":{"speed":2.6,"deg":320},
+;;  "clouds":{"all":75},
+;;  "dt":1450186200,
+;;  "sys":{"type":1,"id":6000,"message":0.004,"country":"RO","sunrise":1450159759,"sunset":1450191076},
+;;  "id":665087,
+;;  "name":"Timisoara",
+;;  "cod":200
+;;  }
+
 (defn fetch-weather [query]
   (GET (str " http://api.openweathermap.org/data/2.5/weather?appid=22f30c03f6fa4e96955fd942787dab02&q=" query)
        {:handler #(swap! model
                          assoc :weather
                          {
-                          :temp (-
-                                 (get-in
-                                  %1
-                                  ["main" "temp"])
-                                 273.15)
+                          :temp (.toFixed (.parseFloat js/window (- (get-in %1 ["main" "temp"]) 273.15)) 0)
                           :city query
                           :country (get-in %1 ["sys" "country"])
+                          :wind [{
+                                  :speed  (get-in %1 ["wind" "speed"])
+                                  :deg  (get-in %1 ["wind" "deg"])
+                                 }]
                           }
                          )}
        false))
@@ -68,11 +88,21 @@
 
 ;;VIEWS
 (defn weather-component [city temp country]
+
   [:div#weather
-    [:h2#city city]
-    [:h3#temp temp]
-    [:h3#contry country]
-   ])
+   [:h2#city "Weather in " (.toUpperCase city)
+    [:span#contry ", " country]
+    ]
+   [:h3#temp
+    [:span "Temperature: "]
+    [:span temp]
+;;     [:span temp]
+    [:sup " o"]
+    [:span "C"]
+    ]
+   ]
+  )
+
 
 
 (defn choose-city-component []
@@ -94,6 +124,14 @@
       )))
 
 
+(defn weather-wind-component [wind]
+  (print (get-in wind [0 :speed]))
+  [:div
+   [:div#wind_speed [:h3 "Wind speed: " (get-in wind [0 :speed]) " m/s"]]
+   [:div#wind_direction [:h3 "Wind direction: " (get-in wind [0 :deg])[:sup " o"]] ]
+   ]
+  )
+
 
 
 (defn main-component []
@@ -109,11 +147,12 @@
     (get-in @model [:weather :city])
     (get-in @model [:weather :temp])
     (get-in @model [:weather :country])
+    ]
+   [:div#wind
+    [weather-wind-component
+     (get-in @model [:weather :wind])
+     ]
     ]])
-
-
-
-
 
 
 (r/render-component [main-component ]
