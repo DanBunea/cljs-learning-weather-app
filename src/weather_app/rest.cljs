@@ -9,8 +9,7 @@
 
 
 (defn GET< [url]
-  (go
-   (<! (let [ch (chan)]
+  (let [ch (chan)]
          (aj/GET url {:handler (fn [resp]
                               (put! ch resp))})
-         ch))))
+         ch))

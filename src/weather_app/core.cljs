@@ -4,7 +4,8 @@
    [weather-app.pi :refer [swap-model! errors]]
    [weather-app.rest :refer [GET<]]
    [cljs.core.async :refer [chan <! >! put! take!]]
-   ))
+   )
+   (:require-macros [cljs.core.async.macros :refer [go]]))
 
 (enable-console-print!)
 
@@ -31,35 +32,46 @@
 
 
 ;;CONTROLLER
-(defn log [& params]
-  (.log js/console params))
+
+(defn swapm! [x y]
+  (swap! y (fn [xx] x)))
+
+
+(defn select [index]
+  (-> @model
+      (assoc-in [:storyboard :pages 0 :layers 0 :children 0 :is_selected] true)
+      (assoc-in [:selected :selected_tab] "tab_properties")
+      (assoc-in [:selected :page_object_cursor] [0])
+      (swapm! model)
+      ))
 
 
 
 
+;;AJAX
 (defn inline-fetch [query]
-  (swap-model! model
-               #(-> %
-                    (assoc :text (str "Data for " query))
-                    ((fn [state]
-                       (let [data  (GET< (str " http://api.openweathermap.org/data/2.5/weather?appid=22f30c03f6fa4e96955fd942787dab02&q=" query))]
-                         (assoc state :weather {
-                          :temp (- (get-in data ["main" "temp"]) 273.15)
-                          :city query
-                          :country (get-in data ["sys" "country"])
-                          }
-                         )))))))
+  (go
+   (-> @model
+       (assoc :text (str "Data for " query))
+       (assoc :weather
+         (let [data (<! (GET< (str " http://api.openweathermap.org/data/2.5/weather?appid=22f30c03f6fa4e96955fd942787dab02&q=" query)))]
+           {
+            :temp (- (get-in data ["main" "temp"]) 273.15)
+            :city query
+            :country (get-in data ["sys" "country"])
+            }))
+       (swapm! model))))
 
 
 
-
+;;EXCEPTION
 (defn change-title [title]
-  (swap-model! model
-               #(-> %
-                    (assoc :text title)
-                    ((fn [state]
-                       (throw "there is an error")))
-                    )))
+  (-> @model
+      (assoc :text title)
+      ((fn [state]
+         (throw "there is an error")))
+      (swapm! model)
+      ))
 
 
 
