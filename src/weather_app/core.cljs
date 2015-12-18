@@ -1,10 +1,12 @@
 (ns weather-app.core
   (:require
    [reagent.core :as r :refer [atom]]
-   [weather-app.pi :refer [swap-model! errors]]
-   [weather-app.rest :refer [GET<]]
+   [weather-app.pi :refer [swap-model! errors add-error clear-errors]]
+   [ajax.core :refer [GET POST]]
+   [weather-app.generic-components :refer [errors-component]]
    [cljs.core.async :refer [chan <! >! put! take!]]
    )
+
    (:require-macros [cljs.core.async.macros :refer [go]]))
 
 (enable-console-print!)
@@ -37,6 +39,7 @@
   (swap! y (fn [xx] x)))
 
 
+
 (defn select [index]
   (-> @model
       (assoc-in [:storyboard :pages 0 :layers 0 :children 0 :is_selected] true)
@@ -44,6 +47,7 @@
       (assoc-in [:selected :page_object_cursor] [0])
       (swapm! model)
       ))
+
 
 
 
@@ -79,6 +83,8 @@
 
 
 ;;VIEWS
+
+
 (defn weather-component [city temp country]
   [:div#weather
     [:h2#city city]
@@ -100,7 +106,7 @@
         {
          :type "button"
          :value "GO"
-         :on-click #(inline-fetch (@inner-state :text))
+         :on-click #(fetch-weather (@inner-state :text))
          }]
        ]
       )))
@@ -112,10 +118,8 @@
 
   (.log js/console 1 (pr-str @model))
   [:div#main
-   [:h2#app-title {
-                   :on-click #(change-title "abc")
-                   }
-    (@model :text)]
+   (if (> (count @errors) 0) [errors-component ])
+   [:h2#app-title { :on-click #(change-title "abc") } (@model :text)]
    [choose-city-component]
    [weather-component
     (get-in @model [:weather :city])

@@ -10,7 +10,8 @@
 (defn add-error [error]
   (swap! errors conj error))
 
-
+(defn clear-errors []
+  (reset! errors []))
 
 
 (defn swap-model! [m func]
