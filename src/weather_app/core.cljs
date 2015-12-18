@@ -2,11 +2,10 @@
   (:require
    [reagent.core :as r :refer [atom]]
    [weather-app.pi :refer [swap-model! errors add-error clear-errors]]
-   [ajax.core :refer [GET POST]]
+   [weather-app.rest :refer [GET<]]
    [weather-app.generic-components :refer [errors-component]]
    [cljs.core.async :refer [chan <! >! put! take!]]
    )
-
    (:require-macros [cljs.core.async.macros :refer [go]]))
 
 (enable-console-print!)
@@ -53,7 +52,7 @@
 
 
 ;;AJAX
-(defn inline-fetch [query]
+(defn fetch-weather [query]
   (go
    (-> @model
        (assoc :text (str "Data for " query))
