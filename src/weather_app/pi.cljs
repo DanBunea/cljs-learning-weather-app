@@ -10,15 +10,18 @@
 (defn add-error [error]
   (swap! errors conj error))
 
+
 (defn clear-errors []
   (reset! errors []))
 
 
-(defn swap-model! [m func]
+
+(defn safe-run [func]
   (try
-    (swap! m func)
+    (func )
     (catch :default e
       (add-error e)
       (.log js/console 5 (pr-str e ))
       )))
+
 

@@ -1,7 +1,7 @@
 (ns weather-app.core
   (:require
    [reagent.core :as r :refer [atom]]
-   [weather-app.pi :refer [swap-model! errors add-error clear-errors]]
+   [weather-app.pi :refer [safe-run errors add-error clear-errors]]
    [weather-app.rest :refer [GET<]]
    [weather-app.generic-components :refer [errors-component]]
    [cljs.core.async :refer [chan <! >! put! take!]]
@@ -53,28 +53,30 @@
 
 ;;AJAX
 (defn fetch-weather [query]
-  (go
-   (-> @model
-       (assoc :text (str "Data for " query))
-       (assoc :weather
-         (let [data (<! (GET< (str " http://api.openweathermap.org/data/2.5/weather?appid=22f30c03f6fa4e96955fd942787dab02&q=" query)))]
-           {
-            :temp (- (get-in data ["main" "temp"]) 273.15)
-            :city query
-            :country (get-in data ["sys" "country"])
-            }))
-       (swapm! model))))
+  (safe-run
+   #(go
+     (-> @model
+         (assoc :text (str "Data for " query))
+         (assoc :weather
+           (let [data (<! (GET< (str " http://api.openweathermap.org/data/2.5/weather?appid=22f30c03f6fa4e96955fd942787dab02&q=" query)))]
+             {
+              :temp (- (get-in data ["main" "temp"]) 273.15)
+              :city query
+              :country (get-in data ["sys" "country"])
+              }))
+         (swapm! model)))))
 
 
 
 ;;EXCEPTION
 (defn change-title [title]
-  (-> @model
-      (assoc :text title)
-      ((fn [state]
-         (throw "there is an error")))
-      (swapm! model)
-      ))
+  (safe-run
+   #(-> @model
+       (assoc :text title)
+       ((fn [state]
+          (throw "there is an error")))
+       (swapm! model)
+       )))
 
 
 
