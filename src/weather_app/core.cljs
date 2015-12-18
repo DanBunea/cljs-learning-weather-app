@@ -95,6 +95,7 @@
    ])
 
 
+
 (defn choose-city-component []
   (let [inner-state (r/atom {:text ""})]
     (fn []
@@ -102,7 +103,10 @@
        [:input#txt_city {
                 :type "text"
                 :value (@inner-state :text)
-                :on-change #(swap! inner-state assoc :text (-> % .-target .-value))
+;;                 :on-change #(swap! inner-state assoc :text (-> % .-target .-value))
+                :on-change #(swap! inner-state assoc :text (let [val (.-value (.-target %))]
+                                                             (print 3 val)
+                                                             val))
                 } ]
        [:input#btn_go
         {

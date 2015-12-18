@@ -88,6 +88,6 @@
                                  (. js/document (getElementById "test")))]
     ;;WHEN clicking the button
     (val ($ :#txt_city) "london")
-    (.change ($ :#txt_city))
+    (.trigger ($ :#txt_city) "change" (clj->js {:value "iasi"}))
     (let [$btn_go ($ :#btn_go)]
       (.click $btn_go)))))
