@@ -79,7 +79,8 @@
        )))
 
 
-
+(defn do-something [x]
+  (print x))
 
 
 
@@ -88,7 +89,7 @@
 
 (defn weather-component [city temp country]
   [:div#weather
-    [:h2#city city]
+    [:h2#city {:on-click #(do-something 101)} city ]
     [:h3#temp temp]
     [:h3#contry country]
    ])
@@ -98,12 +99,12 @@
   (let [inner-state (r/atom {:text ""})]
     (fn []
       [:div
-       [:input {
+       [:input#txt_city {
                 :type "text"
                 :value (@inner-state :text)
                 :on-change #(swap! inner-state assoc :text (-> % .-target .-value))
                 } ]
-       [:input
+       [:input#btn_go
         {
          :type "button"
          :value "GO"

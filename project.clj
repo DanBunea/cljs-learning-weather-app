@@ -10,9 +10,7 @@
                  [reagent "0.5.1" :exclusions [cljsjs/react]]
                  [cljsjs/react-with-addons "0.13.3-0"]
                  [cljs-ajax "0.5.2"]
-
-                 [cljsjs/jquery "2.1.4-0"]
-                 [cljsjs/jquery-ui "1.11.3-1"]]
+                 [jayq "2.5.4"]]
 
   :plugins [[lein-cljsbuild "1.1.1"]
             [lein-figwheel "0.5.0-1"]]
