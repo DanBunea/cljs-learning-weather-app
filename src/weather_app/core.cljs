@@ -96,18 +96,24 @@
 
 
 
+
+
+
 (defn choose-city-component []
   (let [inner-state (r/atom {:text ""})]
     (fn []
       [:div
        [:input#txt_city {
+                :ref "ttt"
                 :type "text"
                 :value (@inner-state :text)
-;;                 :on-change #(swap! inner-state assoc :text (-> % .-target .-value))
-                :on-change #(swap! inner-state assoc :text (let [val (.-value (.-target %))]
-                                                             (print 3 val)
-                                                             val))
-                } ]
+                :on-change #(swap! inner-state assoc :text (-> % .-target .-value))
+;;                 :on-change #(print 1 % (.-value (.-target (.-nativeEvent %))))
+;;                 :on-change #(swap! inner-state assoc :text (let [val (.-value (.-target %))]
+;;                                                              (print 3 val)
+;;                                                              val))
+                }
+        ]
        [:input#btn_go
         {
          :type "button"

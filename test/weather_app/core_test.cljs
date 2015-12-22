@@ -4,7 +4,7 @@
    [cljs.test :refer-macros [deftest testing is]]
    [weather-app.core :as w :refer [weather-component choose-city-component do-something]]
    [weather-app.core]
-   [jayq.core :refer [$ css html val]]
+   [jayq.core :refer [$ css html val trigger]]
    [cljs.core.async :refer [<!]]
    )
 ;;   (:use [jayq.core :only [$ css html]])
@@ -39,12 +39,12 @@
 
 
 
-(deftest center-test
-  (let [after-select (select 0)]
-    (is (= true (get-in after-select  [:storyboard :pages 0 :layers 0 :children 0 :is_selected])  ))
-    (is (= "tab_properties" (get-in after-select  [:selected :selected_tab])))
-    (is (= [0] (get-in after-select  [:selected :page_object_cursor])))
-    ))
+;; (deftest center-test
+;;   (let [after-select (select 0)]
+;;     (is (= true (get-in after-select  [:storyboard :pages 0 :layers 0 :children 0 :is_selected])  ))
+;;     (is (= "tab_properties" (get-in after-select  [:selected :selected_tab])))
+;;     (is (= [0] (get-in after-select  [:selected :page_object_cursor])))
+;;     ))
 
 
 
@@ -62,13 +62,15 @@
 
 (deftest weather-component-test-out
   ;;WHEN render component in test
-  (with-redefs [weather-app.core/do-something (fn [c] (print 102 c))]
   (let [comp (r/render-component [w/weather-component "London" 0]
-                                 (. js/document (getElementById "test")))]
-    ;;ASSERT
-    ;;city name rendered as Paris
-    (let [$title ($ :#city)]
-      (.click $title)))))
+                                 (. js/document (getElementById "test")))
+        expected-invocations (atom [])]
+    (with-redefs [weather-app.core/do-something #(swap! expected-invocations conj %)]
+      ;;ASSERT
+      ;;city name rendered as Paris
+      (.click ($ :#city))
+      (is (=[101] @expected-invocations))
+      )))
 
 (deftest choose-city-component-test-in
   ;;WHEN render component in test
@@ -82,12 +84,17 @@
 
 
 (deftest choose-city-component-test-out
-  (with-redefs [weather-app.core/fetch-weather (fn [c] (print 103 c 104))]
-  ;;GIVEN render component in test
   (let [comp (r/render-component [w/choose-city-component]
-                                 (. js/document (getElementById "test")))]
-    ;;WHEN clicking the button
-    (val ($ :#txt_city) "london")
-    (.trigger ($ :#txt_city) "change" (clj->js {:value "iasi"}))
-    (let [$btn_go ($ :#btn_go)]
-      (.click $btn_go)))))
+                                 (. js/document (getElementById "test")))
+        expected-invocations (atom [])]
+    (with-redefs [weather-app.core/fetch-weather #(swap! expected-invocations conj %)]
+      ;;GIVEN render component in test
+      ;;WHEN changing the city
+      (let [$txt_city ($ :#txt_city)
+            $btn_go ($ :#btn_go)]
+        (val $txt_city "london")
+        (trigger $txt_city :change )
+        (trigger $btn_go :click)
+
+        (is (=["london"] @expected-invocations))
+        ))))
