@@ -6,6 +6,10 @@
    [weather-app.core]
    [jayq.core :refer [$ css html val trigger]]
    [cljs.core.async :refer [<!]]
+
+   [cljs-react-test.simulate :as sim]
+   [dommy.core :as dommy :refer-macros [sel1 sel]]
+
    )
 ;;   (:use [jayq.core :only [$ css html]])
 )
@@ -89,12 +93,9 @@
         expected-invocations (atom [])]
     (with-redefs [weather-app.core/fetch-weather #(swap! expected-invocations conj %)]
       ;;GIVEN render component in test
-      ;;WHEN changing the city
-      (let [$txt_city ($ :#txt_city)
-            $btn_go ($ :#btn_go)]
-        (val $txt_city "london")
-        (trigger $txt_city :change )
-        (trigger $btn_go :click)
-
-        (is (=["london"] @expected-invocations))
-        ))))
+      ;;WHEN changing the city and submitting
+      (sim/change (sel1 :#txt_city) {:target {:value "london"}})
+      (sim/click  (sel1 :#btn_go) nil)
+      ;;ASSERT london should be sent to fetch-weather
+      (is (=["london"] @expected-invocations))
+      )))

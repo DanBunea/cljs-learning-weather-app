@@ -8,6 +8,7 @@
                  [org.clojure/clojurescript "1.7.170"]
                  [org.clojure/core.async "0.2.374"]
                  [reagent "0.5.1" :exclusions [cljsjs/react]]
+                 [cljs-react-test "0.1.3-SNAPSHOT"]
                  [cljsjs/react-with-addons "0.13.3-0"]
                  [cljs-ajax "0.5.2"]
                  [jayq "2.5.4"]]
